@@ -6,8 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imperial Menu</title>
+    <meta name="description" content="Welcome to Imperial Menu, your gateway to an immersive experience. Check out our menu and explore the unique features of our project. Join our community on Discord to chat and stay up to date with the latest news. Thank you for visiting and supporting our work!">
+    <meta property="og:title" content="Imperial Menu">
+    <meta property="og:description" content="Welcome to Imperial Menu, your gateway to an immersive experience. Check out our menu and explore the unique features of our project. Join our community on Discord to chat and stay up to date with the latest news. Thank you for visiting and supporting our work!">
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1233710331696775179/1263550340091871355/image.png?ex=669aa474&is=669952f4&hm=7ead14e52b8b51e30ea70bd0463d83893440a606538c1c84b9e9ff1ffb7c5baf&">
+    <meta property="og:url" content="https://akapopeye.github.io/Menu/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
     <style>
-        
         body {
             margin: 0;
             padding: 0;
@@ -19,34 +25,36 @@
             color: white;
             font-family: Arial, sans-serif;
             text-align: center;
-            animation: lerpBackground 10s infinite alternate;
+            animation: lerpBackground 5s infinite alternate;
         }
-        
+
         @keyframes lerpBackground {
             0% {
                 background-color: black;
             }
+
             100% {
                 background-color: purple;
             }
         }
-        
+
         .container {
             text-align: center;
         }
-        
+
         h1 {
-            font-size: 148px;
+            font-size: 180px;
+            margin-top: 120px; /* Marge plus haute pour le titre */
             margin-bottom: 20px;
         }
-        
+
         .box {
             border: 2px solid white;
             padding: 20px;
             display: inline-block;
             margin-bottom: 20px;
         }
-        
+
         button {
             background-color: white;
             color: black;
@@ -58,10 +66,28 @@
             margin: 10px;
             transition: all 0.3s;
         }
-        
+
         button:hover {
             background-color: magenta;
             color: white;
+        }
+
+        .delete-page-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .delete-page-button:hover {
+            background-color: darkred;
         }
     </style>
 </head>
@@ -69,12 +95,13 @@
 <body>
     <div class="container">
         <h1>Imperial Menu</h1>
-        
+
         <button onclick="window.location.href='https://discord.gg/Z4yqAwaM3M';">Join Discord</button>
-        <button onclick="window.location.href='https://github.com/akapopeye/ImperialMenu/raw/main/Imperial.dll';">Download</button>
+        <button onclick="alert('The menu is not yet ready for download.');">Download</button>
         <button onclick="showCredits()">Credits</button>
+        <button onclick="window.location.href='https://akapopeye.github.io/Menu/';">Menu Visualization</button>
     </div>
-    
+
     <!-- Credits Modal -->
     <div id="creditsModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background-color:black; color:white; padding:20px; border-radius:10px;">
         <h2>Credits</h2>
