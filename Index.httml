@@ -1,34 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ma première page web</title>
+    <title>Imperial Menu</title>
     <style>
+        /* Styling the body */
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            animation: lerpBackground 10s infinite alternate;
         }
+
+        /* Lerp background animation */
+        @keyframes lerpBackground {
+            0% {
+                background-color: black;
+            }
+            100% {
+                background-color: purple;
+            }
+        }
+
+        /* Styling the container */
         .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            margin-top: 50px;
+            text-align: center;
         }
+
+        /* Styling the header */
         h1 {
-            color: #333;
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        /* Styling the box */
+        .box {
+            border: 2px solid white;
+            padding: 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        /* Styling the button */
+        button {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+            transition: all 0.3s;
+        }
+
+        /* Button hover effect */
+        button:hover {
+            background-color: magenta;
+            color: white;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <h1>Bienvenue sur ma page web</h1>
-        <p>Ceci est un exemple de page web simple.</p>
+        <h1>Imperial Menu</h1>
+        <div class="box">
+            <p>Discord Server</p>
+        </div>
+        <button onclick="window.location.href='https://discord.gg/DerYyqW7rK';">Join Discord</button>
+        <button onclick="window.location.href='https://github.com/NotAtomz/NotAtomz.github.io/raw/main/OverpoweredMenuV2Reel.dll';">Download</button>
+        <button onclick="showCredits()">Credits</button>
     </div>
+    
+    <!-- Credits Modal -->
+    <div id="creditsModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background-color:black; color:white; padding:20px; border-radius:10px;">
+        <h2>Credits</h2>
+        <p>This menu was created by Zinx and has 173 mods and 25 pages. It is a modern and better recreation of the Overpowered Menu created by J0kerModz.</p>
+        <p>© Zinx Creations, 2024. All rights reserved.</p>
+        <button onclick="hideCredits()">Close</button>
+    </div>
+
+    <script>
+        function showCredits() {
+            document.getElementById('creditsModal').style.display = 'block';
+        }
+
+        function hideCredits() {
+            document.getElementById('creditsModal').style.display = 'none';
+        }
+    </script>
 </body>
+
 </html>
